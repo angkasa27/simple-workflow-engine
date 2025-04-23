@@ -51,6 +51,14 @@ async function main() {
         },
       },
       {
+        id: "transform-again",
+        type: "transform",
+        data: {
+          transformType: "reverse",
+          inputField: "text",
+        },
+      },
+      {
         id: "end",
         type: "log",
         data: {
@@ -72,6 +80,11 @@ async function main() {
       {
         id: "conn3",
         sourceNodeId: "delay",
+        targetNodeId: "transform-again",
+      },
+      {
+        id: "conn4",
+        sourceNodeId: "transform-again",
         targetNodeId: "end",
       },
     ],

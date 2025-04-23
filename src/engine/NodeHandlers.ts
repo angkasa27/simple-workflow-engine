@@ -56,8 +56,6 @@ export class TransformNodeHandler implements NodeHandler {
 
     value = input[inputField] || "";
 
-    console.log("#### Input value:", input);
-
     // Apply the transformation
     let result;
     switch (transformType) {
